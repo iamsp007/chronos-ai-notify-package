@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Iamsp007\ChronosAiNotify\Http\Controllers\PushNotifications\PushNotificationController;
 
 Route::get('/push/subscribe', [PushNotificationController::class, 'subscribePage'])
         ->name('push.subscribe.page');

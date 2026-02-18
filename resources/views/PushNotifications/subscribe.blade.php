@@ -12,7 +12,7 @@
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
 <script type="text/javascript">
-var vapidPublicKey = "{{ env('VAPID_PUBLIC_KEY') }}";
+var vapidPublicKey = "{{ config('chronos.vapid_public_key') }}";
 
 function urlBase64ToUint8Array(base64String) {
     var padding = '='.repeat((4 - base64String.length % 4) % 4);

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models\PushNotifications;
+namespace Iamsp007\ChronosAiNotify\Models\PushNotifications;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -31,6 +31,7 @@ class PushSubscription extends Model
      */
     public function user()
     {
-        return $this->belongsTo(User::class);
+        $userModel = config('chronos.default_user_model', \App\Models\User::class);
+        return $this->belongsTo($userModel);
     }
 }
